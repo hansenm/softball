@@ -1,4 +1,10 @@
 Softball::Application.routes.draw do
+
+  resources :teams do
+    resources :players
+  end
+  
+  resources :players
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
