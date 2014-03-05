@@ -1,9 +1,14 @@
 <h1>Teams</h1>
 
+<div class="list-group">
 <% @teams.each do |team| %>
-  <ul>
-    <li><%= link_to team.name, team %></li>
-  </ul>
+  <%= link_to team, :class => "list-group-item" do %>
+    <%= team.name %>
+    <span class="badge"><%= team.distinct_positions %> positions</span>
+  <% end %>
 <% end %>
+</div>
 
-<%= link_to "Add a team", new_team_path %>
+<%= link_to new_team_path do %>
+  <span class="glyphicon glyphicon-plus"> </span> Add a team
+<% end %>

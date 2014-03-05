@@ -11,3 +11,17 @@
  *= require_self
  *= require_tree .
  */
+@import "bootstrap";
+
+.starter-template {
+  padding: 40px 15px;
+  background-color: #FFF;
+  margin-bottom: 200px;
+}
+
+body {
+ background-image: url(image-path('ball_bw.jpg'));
+ background-repeat:no-repeat;
+ display: compact;
+ background-attachment: fixed;
+}
